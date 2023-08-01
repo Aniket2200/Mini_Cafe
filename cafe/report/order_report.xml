@@ -1,0 +1,61 @@
+<odoo>
+    <data>
+        <template id="order_report_template">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div style="width:100%; text-align:center; font-size:30px">
+                            <h6>
+                                <strong>Order Detail's</strong>
+                            </h6>
+                        </div>
+                        <br/><br/>
+                        <div class="page">
+                            <div class="column mt32 mb32">
+                                <div class="col-auto col-3 mw-100 mb-2">
+                                    <strong>Order ID: </strong> <p class="m-0" t-field="o.refer" />
+                                </div>
+                                <div class="col-auto col-3 mw-100 mb-2">
+                                    <strong>Table No: </strong> <p class="m-0" t-field="o.table_ids" />
+                                </div>
+                                <div class="col-auto col-3 mw-100 mb-2">
+                                    <strong>Date Time:</strong> <p class="m-0" t-field="o.product_name" />
+                                </div>
+                            </div>
+
+                            <table class="table table-sm o_main_table">
+                                <thead style="display: table-row-group">
+                                    <tr>
+                                        <th> Assigned Person</th>
+<!--                                        <th> Profession </th>-->
+<!--                                        <th> Room No</th>-->
+<!--                                        <th> Status</th>-->
+<!--                                        <th> Total Price</th>-->
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td>
+                                        <span t-field="o.product_name" />
+                                    </td>
+<!--                                    <td>-->
+<!--                                        <span t-field="o.category_name" />-->
+<!--                                    </td>-->
+<!--                                    <td>-->
+<!--                                        <span t-field="o.quantity" />-->
+<!--                                    </td>-->
+<!--                                    <td>-->
+<!--                                        <span t-field="o.sub_total1" />-->
+<!--                                    </td>-->
+<!--                                    <td>-->
+<!--                                        <span t-field="o.price" />-->
+<!--                                    </td>-->
+                                </tr>
+                            </table>
+
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

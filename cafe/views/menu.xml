@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--Menu Operations -->
+    <menuitem id="staff_root"
+              name="Cafe Management System"
+              sequence="10"/>
+
+    <menuitem id="staff_record"
+              name="Cafe Staff"
+              parent="staff_root"
+              action="Action_staff_member"
+              sequence="1"/>
+
+    <menuitem id="add_inventory1"
+              name="Inventory"
+              parent="staff_root"
+              action="action_cafe_inventory"
+              sequence="2"/>
+
+    <menuitem id="add_inventory2"
+              name="Add Table"
+              parent="add_inventory1"
+              action="action_cafe_inventory"
+              sequence="3"/>
+
+    <menuitem id="add_inventory3"
+              name="Add Category"
+              parent="add_inventory1"
+              action="action_category"
+              sequence="4"/>
+
+    <menuitem id="add_inventory4"
+              name="Add Product"
+              parent="add_inventory1"
+              action="action_cafe_main"
+              sequence="5"/>
+
+    <menuitem id="order_root"
+              name="Order"
+              parent="staff_root"
+              action="action_order_main"
+              sequence="6"/>
+
+
+</odoo>

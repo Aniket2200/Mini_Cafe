@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--  Model :- cafe.main -->
+
+    <!-- Form Action -->
+    <record id="action_cafe_main" model="ir.actions.act_window">
+        <field name="name">Product</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">cafe.main</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Welcome To Cafe Management System...!
+            </p>
+        </field>
+    </record>
+
+
+    <!-- Search View -->
+    <record id="view_main_search" model="ir.ui.view">
+        <field name="name">cafe.inventory.search</field>
+        <field name="model">cafe.main</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="category_id"/>
+                <field name="productname"/>
+            </search>
+        </field>
+    </record>
+    <!-- Search View -->
+
+
+
+    <!-- Add Product's / Food's -->
+    <record id="view_table_inventory" model="ir.ui.view">
+        <field name="name">cafe.product.form</field>
+        <field name="model">cafe.main</field>
+        <field name="arch" type="xml">
+            <form string="inventory">
+                <sheet>
+                    <center>
+                        <h1>
+                            <center>ADD PRODUCT'S DETAIL</center>
+                        </h1>
+                        <hr/>
+                        <group>
+                            <group>
+                                <field name="category_id" widget='many2one_tags'/>
+                                <field name="productname" required="True"/>
+                                <field name="price" required="True"/>
+                            </group>
+                        </group>
+                    </center>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_inventory" model="ir.ui.view">
+        <field name="name">cafe.product.tree</field>
+        <field name="model">cafe.main</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="category_id"/>
+                <field name="productname"/>
+                <field name="price"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

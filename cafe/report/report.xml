@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="order_name_data" model="ir.actions.report">
+            <!-- Record definition for a report action -->
+            <field name="name">Order Data</field>
+            <field name="model">cafe.order</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">cafe.order_report_template</field>
+            <field name="report_file">cafe.order_report_template</field>
+            <field name="binding_model_id" ref="model_cafe_order"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>
+
+
+

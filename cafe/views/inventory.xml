@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Table Action -->
+    <record id="action_cafe_inventory" model="ir.actions.act_window">
+        <field name="name">Inventory</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">cafe.inventory</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Welcome To Cafe Management System...!
+            </p>
+        </field>
+    </record>
+
+    <!-- Search View In staff members -->
+    <record id="view_table_search" model="ir.ui.view">
+        <field name="name">cafe.table.search</field>
+        <field name="model">cafe.inventory</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="table_no"/>
+                <field name="capacity"/>
+
+            </search>
+        </field>
+    </record>
+
+
+
+    <!-- Add Table's -->
+    <record id="view_table_inventory" model="ir.ui.view">
+        <field name="name">cafe.inventory.form</field>
+        <field name="model">cafe.inventory</field>
+        <field name="arch" type="xml">
+            <form string="inventory">
+                <sheet>
+                    <center>
+
+                        <h1>
+                            <center>ADD DETAILS OF CAFE TABLE'S</center>
+                        </h1>
+                        <hr/>
+                        <group>
+                            <group>
+                                <field name="table_no" placeholder="Should be write in 3 digit..."/>
+                                <field name="capacity"/>
+                            </group>
+                        </group>
+                    </center>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--List(Tree)View Tables Detail's -->
+    <record id="inventory_tree" model="ir.ui.view">
+        <field name="name">cafe.inventory.tree</field>
+        <field name="model">cafe.inventory</field>
+        <field name="arch" type="xml">
+
+            <tree>
+                <field name="table_no" />
+                <field name="capacity"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

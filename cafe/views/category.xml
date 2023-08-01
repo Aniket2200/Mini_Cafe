@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- category Action -->
+    <record id="action_category" model="ir.actions.act_window">
+        <field name="name">Category</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">cafe.category</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Welcome To Cafe Management System...!
+            </p>
+        </field>
+    </record>
+
+    <!-- Add Table's -->
+    <record id="view_category" model="ir.ui.view">
+        <field name="name">cafe.category.form</field>
+        <field name="model">cafe.category</field>
+        <field name="arch" type="xml">
+            <form string="category">
+                <sheet>
+                    <center>
+
+                        <h1>
+                            <center>ADD CATEGORY'S</center>
+                        </h1>
+                        <hr/>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                        </group>
+                    </center>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--List(Tree)View Tables Detail's -->
+    <record id="category_tree" model="ir.ui.view">
+        <field name="name">cafe.category.tree</field>
+        <field name="model">cafe.category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

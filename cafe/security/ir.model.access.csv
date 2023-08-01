@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cafe_staff_member,access.cafe.staff_member,model_cafe_staff_member,base.group_user,1,1,1,1
+access_cafe_inventory,access.cafe.inventory,model_cafe_inventory,base.group_user,1,1,1,1
+access_cafe_category,access.cafe.category,model_cafe_category,base.group_user,1,1,1,1
+access_cafe_main,access.cafe.main,model_cafe_main,base.group_user,1,1,1,1
+access_cafe_order,access.cafe.order,model_cafe_order,base.group_user,1,1,1,1
+access_cafe_order_line,access.cafe.order.line,model_cafe_order_line,base.group_user,1,1,1,1
+access_cafe_drink,access.cafe.drink,model_cafe_drink,base.group_user,1,1,1,1
+access_cafe_starter,access.cafe.starter,model_cafe_starter,base.group_user,1,1,1,1
